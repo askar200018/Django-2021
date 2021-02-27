@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>Add Task</button>
+      <h3>Tasks in "List 1"</h3>
+    {% if todos %}
+        <ul>
+        {% for todo in todos %}
+            {{ todo.name }}
+            {{ todo.created_date }}
+            {{ todo.expire_date }}
+            {{ todo.owner }}
+            <button>Done</button>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No todos are available.</p>
+    {% endif %}
+    <div class="button-group">
+        <button class="btn-view">View completed tasks</button>
+        <button class="btn-delet">Delete this list</button>
+    </div>
+</body>
+</html>
