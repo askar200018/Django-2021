@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_jwt',
+    'auth_',
+    'main',
 ]
 
 MIDDLEWARE = [
@@ -97,6 +99,8 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.BasicAuthentication',
     ),
 }
+
+AUTH_USER_MODEL = 'auth_.MainUser'
 
 
 # Password validation
